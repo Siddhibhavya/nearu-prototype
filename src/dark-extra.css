@@ -1,0 +1,39 @@
+/* Hand-written dark-mode details (kept after the generated dark.css): legibility on yellow cards, search, tags and the ID card. */
+.phone-app.dark .category-list button:hover, .phone-app.dark .filter-row button:hover { background: var(--yellow); border-color: var(--yellow); color: #17120e; }
+.phone-app.dark .category-list button.selected:hover, .phone-app.dark .filter-row button.selected:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+.phone-app.dark .become-seller, .phone-app.dark .become-seller * { color: #17120e !important; }
+.phone-app.dark .cart-paybar, .phone-app.dark .cart-paybar > span, .phone-app.dark .wishlist-total, .phone-app.dark .wishlist-total span { color: #17120e !important; }
+.phone-app.dark .cart-paybar > span b, .phone-app.dark .wishlist-total strong { color: var(--blue); }
+.phone-app.dark .so-opt.on, .phone-app.dark .so-opt.on *, .phone-app.dark .so-chips button.on, .phone-app.dark .nx-chips button.on, .phone-app.dark .nx-notify.done, .phone-app.dark .restore-btn, .phone-app.dark .pd-replybtn, .phone-app.dark .drawer-become, .phone-app.dark .collab-msg, .phone-app.dark .collab-msg * { color: #17120e !important; }
+
+.phone-app.dark :is(.co-card h2, .co-card h3, .co-card h4, .an-card h3, .pf-contact h3, .my-collabs h3) { color: #17120e; }
+
+
+/* account lists: each row is a bordered tile that grows a little on hover */
+.phone-app.dark .profile-action-list, .phone-app.dark .profile-help-card { background: transparent !important; box-shadow: none !important; overflow: visible; padding: 0; }
+.phone-app.dark .profile-action-list button, .phone-app.dark .profile-help-card button { margin-bottom: 8px; border: 1px solid rgba(23,18,14,.28) !important; border-radius: 16px; background: #f3e8d3; box-shadow: 0 4px 10px rgba(0,0,0,.18); }
+.phone-app.dark .profile-action-list button:hover, .phone-app.dark .profile-help-card button:hover { transform: scale(1.02); }
+.phone-app.dark .profile-help-title { color: var(--ink); }
+
+/* storefront making in dark mode: no white boxes; tags stay yellow with black text */
+.phone-app.dark .ss-tags, .phone-app.dark .nx-stock, .phone-app.dark .nx-qty { background: #3a2d23 !important; border-color: rgba(246,239,220,.45) !important; box-shadow: none; }
+.phone-app.dark .ss-tag, .phone-app.dark .ss-tag *, .phone-app.dark .ss-btn.coral, .phone-app.dark .ss-stat.in { color: #17120e !important; }
+.phone-app.dark .ss-tag button img { filter: brightness(0); }
+.phone-app.dark .ss-add-tag { border-color: rgba(246,239,220,.7); }
+.phone-app.dark .ss-add-tag img { filter: brightness(0) invert(1); }
+
+/* legibility audit fixes: anything on a yellow / coral fill is black text */
+.phone-app.dark :is(.nx-bank, .nx-bank *, .so-hero, .so-hero *, .nx-bubbles p.me, .nx-bubbles p.me *, .pd-label, .pd-bar .pd-buy, .pd-bar .pd-buy *, .onboarding-create, .onboarding-create *, .flow-primary, .flow-primary *, .co-chip, .co-chip *, .pd-verified, .stock-pill, .drawer-links button.active, .drawer-links button.active *, .collab-msg, .collab-msg *) { color: #17120e !important; }
+.phone-app.dark .role-sell img, .phone-app.dark .onboarding-create img, .phone-app.dark .flow-primary img { filter: brightness(0); }
+.phone-app.dark .drawer-links button.active .ic { stroke: #17120e; }
+.phone-app.dark :is(.cart-paybar > span b, .wishlist-total strong) { color: #0a46a8 !important; }
+.phone-app.dark .pd-reviews article header span, .phone-app.dark .pd-rating span { color: #d99a00; }
+.phone-app.dark .flow-text-link b, .phone-app.dark .flow-text-link { color: var(--blue-text); }
+.phone-app.dark .flow-text-link { color: var(--ink); }
+.phone-app.dark :is(.profile-action-list, .profile-help-card) { --ink: #f6efdc; --ink-rgb: 246,239,220; --muted: #cfc3a8; --muted-rgb: 207,195,168; color: #f6efdc; }
+
+.phone-app.dark .profile-help-title { border-bottom: 0 !important; }
+.phone-app.dark .profile-help-title { color: #f6efdc !important; }
+.phone-app.dark :is(.ss-form input, .ss-form textarea, .pd-form textarea, .so-field input) { color: #17120e !important; }
+.phone-app.dark .co-verified, .phone-app.dark .co-verified * { color: #0a46a8 !important; }
+.phone-app.dark .ss-btn.blue { background: #f3e8d3; color: #17120e; border-color: rgba(23,18,14,.6); }

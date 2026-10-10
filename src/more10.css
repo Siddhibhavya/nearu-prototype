@@ -1,0 +1,4 @@
+/* Round 10: log out and action pills get a subtle shadow at rest and a clearer shadow + scale on hover. */
+.profile-logout { box-shadow: 0 3px 8px rgba(23,18,14,.14); }
+.profile-logout:hover { background: #d62f36 !important; border-color: #d62f36 !important; color: #fff !important; transform: scale(1.05); box-shadow: 0 8px 18px rgba(214,47,54,.35) !important; }
+.order-action:hover, .payment-action:hover, .nx-btn:hover, .seller-add-listing:hover, .add-listing-button:hover, .restore-btn:hover, .pd-replybtn:hover, .nx-notify:hover, .nx-msg:hover, .collab-status:hover { box-shadow: 0 8px 16px rgba(23,18,14,.2) !important; }

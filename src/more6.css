@@ -1,0 +1,82 @@
+/* Round 6: become a seller, seller onboarding, contact details, storefront listings, review actions. */
+.become-seller { width: 100%; margin: 0 0 14px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; border: 2px solid var(--ink); border-radius: 18px; text-align: left; color: var(--ink); }
+.become-seller span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.become-seller strong { font: 700 18px/22px var(--font-display); }
+.become-seller small { font-size: 13px; color: rgba(23,18,14,.75); }
+.become-seller b { font: 700 22px var(--font-display); }
+.drawer-become { flex: none; margin: 18px 2px 6px; width: calc(100% - 4px); min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; border: 2px solid var(--ink); border-radius: 999px; font: 700 15px var(--font-display); color: var(--ink); }
+
+/* contact details */
+.pf-contact { margin: 14px 0; padding: 16px 18px; border-radius: 20px; background: #fff; box-shadow: 0 6px 20px rgba(46,42,37,.08); }
+.pf-contact h3 { margin: 0 0 12px; font: 700 18px var(--font-display); }
+.pf-contact > div { display: flex; align-items: flex-start; gap: 14px; padding: 10px 0; border-top: 1px solid var(--line); color: var(--muted); }
+.pf-contact > div > span { display: flex; flex-direction: column; gap: 2px; min-width: 0; font-size: 15px; line-height: 21px; color: var(--ink); overflow-wrap: anywhere; }
+.pf-contact small { font: 700 10px/14px var(--font-display); letter-spacing: .12em; color: var(--muted); }
+.pf-contact .nx-link { padding-top: 10px; }
+textarea.short { height: 84px !important; }
+
+/* seller onboarding */
+.so-view { padding: 96px 22px 28px; display: flex; flex-direction: column; }
+.so-back { position: absolute !important; left: 12px; top: 56px; width: 44px; height: 44px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--ink); }
+.so-dots { display: flex; justify-content: center; gap: 8px; margin: 0 0 22px; }
+.so-dots i { width: 28px; height: 6px; border-radius: 999px; background: rgba(23,18,14,.18); }
+.so-dots i.on { background: var(--blue); }
+.so-kicker { font: 700 11px/14px var(--font-display); letter-spacing: .16em; color: #e8474c; text-align: center; }
+.so-title { margin: 6px 0 18px; font: 700 28px/34px var(--font-display); text-align: center; color: var(--blue); }
+.so-sub { margin: 0 0 16px; font-size: 14px; line-height: 20px; color: var(--muted); text-align: center; }
+.so-label { margin: 18px 0 10px; font: 700 12px/16px var(--font-display); letter-spacing: .1em; color: var(--muted); }
+.so-list { display: flex; flex-direction: column; gap: 12px; }
+.so-opt { display: flex; flex-direction: column; gap: 4px; width: 100%; padding: 16px 18px; border: 2px solid rgba(23,18,14,.25); border-radius: 18px; background: #fff; text-align: left; color: var(--ink); }
+.so-opt strong { font: 700 17px/22px var(--font-display); }
+.so-opt small { font-size: 13px; line-height: 18px; color: var(--muted); }
+.so-opt.slim { padding: 14px 18px; }
+.so-opt.on { border-color: var(--ink); background: var(--yellow); }
+.so-opt.on small { color: rgba(23,18,14,.8); }
+.so-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.so-chips button { padding: 10px 16px; border: 2px solid rgba(23,18,14,.25); border-radius: 999px; background: #fff; font: 700 14px var(--font-display); color: var(--ink); }
+.so-chips button.on { border-color: var(--ink); background: var(--yellow); }
+.so-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.so-field span { font: 700 12px/16px var(--font-display); letter-spacing: .1em; color: var(--muted); }
+.so-field input { height: 52px; padding: 0 16px; border: 1px solid rgba(23,18,14,.2); border-radius: 14px; background: #fffefb; font-size: 16px; color: var(--ink); outline: 0; }
+.so-sum { margin: 0 0 14px; padding: 4px 16px; border: 1px solid rgba(23,18,14,.2); border-radius: 16px; background: #fff; }
+.so-sum div { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.so-sum div:last-child { border: 0; }
+.so-sum dt { color: var(--muted); font-size: 13px; }
+.so-sum dd { margin: 0; text-align: right; font: 700 14px/18px var(--font-display); }
+.so-next { margin-top: auto; align-self: stretch; }
+.so-next:disabled { opacity: .45; cursor: default; }
+
+/* storefront listings */
+.sf-listings { margin: 26px 0 0; text-align: left; }
+.sf-listings h3 { margin: 0 0 14px; font: 700 20px var(--font-display); display: flex; align-items: baseline; justify-content: space-between; }
+.sf-listings h3 small { font: 400 13px var(--font-body); color: var(--muted); }
+.sf-card { position: relative; }
+.sf-card em { position: absolute; left: 8px; top: 8px; padding: 3px 8px; border-radius: 999px; font: 700 9px/12px var(--font-display); font-style: normal; letter-spacing: .06em; background: #dff1dc; color: #28592c; }
+.sf-card em.out { background: #ffd9d9; color: #9d3030; }
+
+/* reviews: like, reply, write */
+.pd-write { width: 100%; margin: 0 0 12px; }
+.pd-form { display: flex; flex-direction: column; gap: 10px; margin: 10px 0 12px; padding: 12px; border-radius: 14px; background: #fffefb; border: 1px solid rgba(23,18,14,.14); }
+.pd-form textarea { width: 100%; min-height: 84px; padding: 10px 12px; border: 1px solid rgba(23,18,14,.18); border-radius: 12px; background: #fff; font: 400 15px/21px var(--font-body); color: var(--ink); resize: none; outline: 0; }
+.pd-stars { display: flex; gap: 4px; }
+.pd-stars button { width: 38px; height: 38px; border: 0; background: none; font-size: 28px; line-height: 1; color: rgba(23,18,14,.25); }
+.pd-stars button.on { color: var(--yellow); text-shadow: 0 0 1px rgba(23,18,14,.7); }
+.pd-reviews article footer { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.pd-like { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border: 1.5px solid rgba(23,18,14,.3); border-radius: 999px; background: #fff; font: 700 12px var(--font-display); color: var(--muted); }
+.pd-like.on { border-color: var(--ink); color: var(--ink); background: #ffe9ea; }
+.pd-like:disabled { opacity: .7; }
+.pd-replybtn { margin-left: auto; padding: 6px 16px; border: 2px solid var(--ink); border-radius: 999px; background: var(--yellow); font: 700 12px var(--font-display); color: var(--ink); }
+.pd-replybtn:hover { background: #f2b51f; transform: scale(1.04); }
+.pd-reply { margin-top: 8px; padding: 10px 12px; border-left: 3px solid var(--blue); border-radius: 0 10px 10px 0; background: rgba(0,87,231,.07); }
+.pd-reply b { font: 700 11px var(--font-display); letter-spacing: .08em; color: var(--blue); }
+.pd-reply p { margin: 3px 0 0; font-size: 14px; line-height: 20px; }
+
+/* On phones and small tablets everything that must stay put is fixed to the screen itself, so it never scrolls away with the page. */
+@media (max-width: 760px) {
+  html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+  .status-bar, .app-header, .page-bar, .mobile-nav { position: fixed !important; left: 50% !important; right: auto !important; transform: translateX(-50%) !important; width: min(100vw, 430px) !important; margin: 0 !important; }
+  .cart-paybar, .wishlist-total { position: fixed !important; left: 50% !important; right: auto !important; transform: translateX(-50%) !important; width: min(calc(100vw - 24px), 406px) !important; }
+  .page-bar { transform: translate(-50%, var(--bar-y, 0px)) !important; }
+  .drawer-layer { position: fixed !important; left: 50% !important; right: auto !important; transform: translateX(-50%) !important; width: min(100vw, 430px) !important; }
+  .confirm-layer { position: fixed !important; left: 50% !important; right: auto !important; transform: translateX(-50%) !important; width: min(100vw, 430px) !important; }
+}

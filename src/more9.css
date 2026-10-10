@@ -1,0 +1,6 @@
+/* Round 9: tag hover (yellow fill), carousel snap alignment, pay bars sit lower. */
+.category-list button:hover, .filter-row button:hover { background: var(--yellow); border-color: var(--yellow); color: var(--ink); transform: scale(1.04); }
+.category-list button.selected:hover, .filter-row button.selected:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+.featured-scroll { scroll-padding: 0 24px; }
+.cart-paybar, .wishlist-total { bottom: 106px !important; color: #17120e; }
+.cart-paybar > span, .wishlist-total span { color: #17120e; }

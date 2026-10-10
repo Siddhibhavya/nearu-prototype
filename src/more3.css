@@ -1,0 +1,69 @@
+/* ===================================================================================================================
+   Round 3: page bar (arrow + title), working tabs, fixed pay bars, version line, hover = fill + scale, profile polish.
+   =================================================================================================================== */
+
+/* one title row on every inner page: the back arrow and the page name side by side */
+.page-bar { position: absolute; z-index: 35; top: 120px; left: 0; right: 0; height: 82px; transform: translateY(var(--bar-y, 0px)); display: flex; align-items: center; gap: 2px; padding: 30px 14px 0 12px; background: var(--paper); }
+.page-bar h2 { flex: 1; min-width: 0; margin: 0; font: 700 28px/52px var(--font-display); letter-spacing: -.03em; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.page-bar .screen-back-button { position: static !important; flex: none; width: 44px; height: 44px; background: transparent !important; box-shadow: none; }
+.bar-action { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--ink); }
+.page-bar ~ main.screen-content { padding-top: 210px !important; }
+.page-bar ~ main.screen-content :is(.nx-topbar:not(.between), .view-title, .storefront-title, .ss-title, .an-top, .data-heading, .co-head h2) { display: none !important; }
+.page-bar ~ main.screen-content .nx-topbar.between h2 { display: none; }
+.page-bar ~ main.screen-content .nx-topbar.between { justify-content: flex-end; margin-bottom: 4px; }
+.page-bar ~ main.screen-content.pd-view { padding-top: 210px !important; }
+.page-bar ~ main.screen-content :is(.an-view, .co-view, .ss-view) { padding-top: 0 !important; }
+.phone-app > main.screen-content.an-view, .phone-app > main.screen-content.co-view, .phone-app > main.screen-content.ss-view { padding-top: 210px !important; }
+.app-header { box-shadow: none !important; border-bottom: 0 !important; }
+
+/* the page area ends where the nav bar begins, so only a 40px tail is needed after the last line */
+.phone-app > main.screen-content:not(.onboarding-view):not(.account-flow) { padding-bottom: 40px !important; }
+
+/* hamburger: one svg, three equal lines */
+.menu-button { width: 40px; height: 40px; padding: 0; display: grid; place-items: center; color: var(--ink); }
+.menu-button span { display: none; }
+
+/* tabs that read as tabs (store management, orders) */
+.nx-utabs { display: flex; gap: 26px; margin: 0 -20px 18px; padding: 0 20px; border-bottom: 1px solid #e3dccb; overflow-x: auto; scrollbar-width: none; }
+.nx-utabs button { flex: none; height: 44px; padding: 0; border: 0; border-bottom: 3px solid transparent; background: none; font: 700 16px var(--font-display); color: rgba(79,70,61,.62); }
+.nx-utabs button.on { color: var(--ink); border-bottom-color: var(--ink); }
+.stock-pill.sold { background: #dbe8ff; color: #0a46a8; }
+.restore-btn { justify-self: end; padding: 8px 14px; border: 2px solid var(--ink); border-radius: 999px; background: var(--yellow); font: 700 12px var(--font-display); }
+.nx-pref { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 16px; border: 1px solid rgba(23,18,14,.2); border-radius: 16px; background: #fff; }
+.nx-pref div { display: flex; flex-direction: column; gap: 3px; }
+.nx-pref strong { font: 700 16px var(--font-display); }
+.nx-pref small { font-size: 13px; line-height: 17px; color: var(--muted); }
+
+/* profile card: bolder border, spaced pills, thick pill borders */
+.profile-card-exact { border: 2px solid var(--blue); box-shadow: 0 8px 22px rgba(0,87,231,.2); }
+.profile-name-row { margin-bottom: 10px; }
+.profile-name-row button.pf-edit, .profile-store-row b.pf-verified { border: 2px solid var(--ink); }
+.profile-store-row b.pf-verified { background: #2f9e44; color: #fff; }
+.pf-pill .ic { color: currentColor; }
+.maker-tag { padding: 4px 11px; border-radius: 999px; background: #2f9e44; color: #fff; font-size: 10px; }
+
+/* text cards: whiter than the page so they stand out */
+.ss-form input, .ss-form textarea, .ss-tags, .nx-stock, .nx-qty { background: #fffefb !important; border: 1px solid rgba(23,18,14,.14) !important; box-shadow: 0 1px 2px rgba(23,18,14,.06); }
+
+/* total payable: fixed above the navigation, with a proper border */
+.payable-strip { display: none; }
+.cart-paybar { left: 50%; width: min(calc(100% - 24px), 406px); bottom: 124px; border: 2px solid var(--ink); border-radius: 18px; background: #ffe5a4; box-shadow: 0 8px 18px rgba(23,18,14,.16); }
+.wishlist-total { position: absolute; z-index: 27; left: 12px; right: 12px; bottom: 124px; margin: 0; padding: 16px 20px; border: 2px solid var(--ink); border-radius: 18px; background: #ffe5a4; box-shadow: 0 8px 18px rgba(23,18,14,.16); }
+.phone-app > main.wishlist-view.screen-content:not(.a):not(.b), .phone-app > main.cart-view.screen-content:not(.a):not(.b) { padding-bottom: 120px !important; }
+
+/* hover = fill + scale (no white invert) */
+.order-action:hover, .nx-btn.order-action:hover, .seller-add-listing:hover, .add-listing-button:hover { background: #f2b51f !important; border-color: #f2b51f !important; color: var(--ink) !important; transform: scale(1.03); }
+.payment-action:hover { background: #f04b50 !important; border-color: #f04b50 !important; color: var(--ink) !important; box-shadow: none !important; transform: scale(1.03); }
+.nx-btn.line:hover, .nx-btn.mini:hover, .restore-btn:hover { background: var(--yellow); transform: scale(1.03); }
+.nx-btn.dark:hover { background: #3a322b; transform: scale(1.03); }
+.role-buy:hover, .role-sell:hover, .role-both:hover, .onboarding-create:hover, .onboarding-login:hover, .flow-primary:hover { transform: scale(1.02); }
+.onboarding-create:hover img, .flow-primary:hover img, .role-sell:hover img { filter: none; }
+
+/* the drawer sits over the navigation bar so its bottom rows stay visible */
+.drawer-layer { z-index: 90 !important; }
+.side-menu { padding-bottom: 0; }
+.drawer-theme { padding-bottom: 14px; }
+
+.cart-paybar { position: absolute !important; left: 12px !important; right: 12px !important; width: auto !important; transform: none !important; }
+
+.phone-app > main.screen-content.ss-view:not(.nx-form):not(.a) { padding-bottom: 190px !important; }

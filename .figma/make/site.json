@@ -1,0 +1,10 @@
+{
+  "description": "This web application enables users to create interactive prototypes for their app ideas, facilitating design testing and feedback for developers and designers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

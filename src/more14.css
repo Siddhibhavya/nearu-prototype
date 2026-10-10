@@ -1,0 +1,31 @@
+/* Round 14: universal law: a pill's icon and its text are always the same colour. Brand pill sizes on the confirmed screen. */
+.confirmed-view button { flex: none; width: min(100%, 320px); height: 56px; margin-top: 16px; border-radius: 16px; font-size: 16px; }
+.confirmed-view .order-action { margin-top: 8px; }
+
+/* Become a seller: yellow card -> deeper yellow on hover, text and icon both black */
+.become-seller:hover, .become-seller.order-action:hover { background: #f2b51f !important; border-color: var(--ink) !important; color: #17120e !important; box-shadow: 0 8px 16px rgba(23,18,14,.22) !important; transform: scale(1.03); }
+.become-seller:hover *, .become-seller.order-action:hover * { color: #17120e !important; }
+.become-seller svg { color: #17120e; }
+
+/* role pills: black text, black icon (coral and white fills are light) */
+.role-buy, .role-sell, .role-both { color: #17120e; }
+.role-buy img, .role-sell img { filter: brightness(0); }
+.role-buy strong, .role-sell strong, .role-both strong { color: #17120e; }
+
+/* storefront and listing pills: icons follow the text colour */
+.ss-btn.coral img, .ss-btn.line img, .sd-store img, .ss-live img, .seller-add-listing img, .add-listing-button img { filter: brightness(0); }
+.order-action:hover img, .sd-store:hover img, .seller-add-listing:hover img { filter: brightness(0) invert(1); }
+
+/* red hover (Pay Now, Buy Now, Create account): dark red fill, white text and white icon */
+.payment-action:hover, .pd-buy:hover, .onboarding-create:hover, .flow-primary:hover { background: #c9252c !important; border-color: #c9252c !important; color: #fff !important; }
+.payment-action:hover *, .pd-buy:hover *, .onboarding-create:hover *, .flow-primary:hover * { color: #fff !important; }
+.pd-buy:hover svg, .payment-action:hover svg { color: #fff; }
+.onboarding-create:hover img, .flow-primary:hover img { filter: brightness(0) invert(1) !important; }
+
+/* white pills get a subtle grey border; Setup Storefront has no title bar so it starts right under the header */
+.onboarding-login { border: 1px solid #e0ddd6 !important; }
+.phone-app > main.screen-content.ss-view:not(.nx-form):not(.a) { padding-top: 112px !important; }
+
+/* Analytics pill = same design as Live Preview */
+.ss-btn.blue { border: 1px solid var(--ink); background: #fff; color: var(--ink); font-weight: 700; filter: drop-shadow(0 1px 2px rgba(0,0,0,.25)); }
+.ss-btn.blue img { filter: brightness(0); }

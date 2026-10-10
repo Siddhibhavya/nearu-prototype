@@ -1,0 +1,27 @@
+/* Round 12: chat send arrow, three stat boxes, onboarding buttons (same colour for text and arrow), spacing between the three role pills. */
+.chat-send { width: 50px; height: 50px; }
+.chat-send svg { width: 26px; height: 26px; }
+
+.pf-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 14px; }
+.pf-stats div { padding: 14px 6px; text-align: center; border: 1px solid #bcd2f5; border-radius: 16px; background: #fff; box-shadow: 0 6px 16px rgba(23,18,14,.1); }
+.pf-stats strong { display: block; font: 700 24px/28px var(--font-display); color: var(--ink); }
+.pf-stats span { font: 700 13px/18px var(--font-display); color: var(--blue); }
+
+/* the pill text and its arrow are always one colour: black */
+.onboarding-create, .flow-primary, .verify-button { color: #17120e; }
+.onboarding-create img, .flow-primary img, .verify-button img { filter: brightness(0); }
+.onboarding-create:hover, .flow-primary:hover { color: #17120e; }
+.onboarding-create:hover img, .flow-primary:hover img, .role-sell:hover img { filter: brightness(0); }
+
+/* three role pills: 20px apart, never touching; the handshake is as big as the other icons */
+.role-options { display: flex; flex-direction: column; gap: 20px; }
+.role-options > button { margin: 0; }
+.role-options > button.role-both img { width: 38px; height: 22px; object-fit: contain; }
+
+/* wishlist: total payable at the top under the title, Add selected to Cart pinned above the nav */
+.phone-app > main.wishlist-view .wishlist-total { position: static !important; left: auto !important; right: auto !important; bottom: auto !important; transform: none !important; width: auto !important; margin: 0 0 16px; }
+.wl-bar { position: absolute; z-index: 28; left: 12px; right: 12px; bottom: 106px; }
+.wl-bar .wishlist-checkout { width: 100%; height: 54px; margin: 0; border-radius: 16px; box-shadow: 0 8px 18px rgba(23,18,14,.18); }
+@media (max-width: 760px) {
+  .wl-bar { position: fixed !important; left: 50% !important; right: auto !important; transform: translateX(-50%) !important; width: min(calc(100vw - 24px), 406px) !important; }
+}

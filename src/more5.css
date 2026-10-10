@@ -1,0 +1,2 @@
+/* Round 5: tag under the ID photo (Hustler! for sellers, Best buyer for buyers): plain bold italic. */
+.id-tag { position: absolute; left: 14px; top: 186px; width: 116px; text-align: center; font: italic 700 18px/24px var(--font-display); color: var(--ink); white-space: nowrap; }

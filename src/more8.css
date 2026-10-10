@@ -1,0 +1,7 @@
+/* Status bar: always black with white time and icons, in light and dark mode. */
+.status-bar { background: #17120e !important; color: #fff !important; }
+.status-time { color: #fff !important; }
+.signal-bars i, .battery i { background: #fff !important; }
+.battery::before { border-color: #fff !important; }
+.battery::after { background: #fff !important; }
+.status-network > img { filter: brightness(0) invert(1) !important; }

@@ -1,0 +1,115 @@
+/* ===================================================================================================================
+   Round 2: one icon family, arrow back button, drawer layout, wells, profile pills, product details, shop, dark mode.
+   =================================================================================================================== */
+:root { --well: #eadfc2; --paper: #fff4ee; }
+.ic { display: block; flex: none; }
+
+/* header icons: dark grey at rest, filled when selected (bell yellow, heart red), no round highlight */
+.wishlist-button { color: var(--muted); }.wishlist-button.active { background: transparent; }
+.wishlist-button.active { color: var(--ink); }
+.wishlist-button .ic { width: var(--icon-lg); height: auto; }
+
+/* the one back arrow, same place on every inner page */
+.screen-back-button { top: 124px; left: 14px; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: var(--paper); box-shadow: none; color: var(--ink); display: grid; place-items: center; gap: 0; }
+.screen-back-button:active { transform: translateX(-3px); }
+.an-view, .co-view { padding-top: 184px !important; }
+.an-top { padding-top: 0; }
+
+/* list-row icons (profile, help) */
+.profile-action-icon { width: var(--icon-lg); height: var(--icon-lg); display: grid; place-items: center; color: var(--muted); justify-self: start; }
+.profile-action-list button:active .profile-action-icon { color: var(--ink); }
+.wl-heart { color: var(--ink) !important; background: transparent !important; border: 0; display: grid; place-items: center; }
+.pd-heart { color: var(--muted); }
+.pd-heart.on { color: var(--ink); }
+
+/* profile card: equal pills, green verified, edit with a pen */
+.pf-pill { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 112px; height: 28px; padding: 0 12px; border: 0; border-radius: 999px; font: 700 12px var(--font-display); letter-spacing: .04em; }
+.profile-name-row button.pf-edit { background: var(--yellow); color: var(--ink); }
+.profile-store-row b.pf-verified { background: #2f9e44; color: #fff; }
+.profile-photo i { background: var(--blue); color: #fff; width: 24px; height: 24px; right: -4px; bottom: 4px; }
+.ep-photo { position: relative; width: 104px; height: 104px; margin: 0 auto 8px; }
+.ep-photo img { width: 100%; height: 100%; object-fit: cover; border: 2px solid var(--blue); border-radius: 50%; }
+.ep-photo span { position: absolute; right: 0; bottom: 4px; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; background: var(--blue); color: #fff; }
+.ep-view .ss-form { margin-top: 20px; }
+
+/* verified seal (payment confirmed, payout verified) */
+.seal-wrap { display: block; margin: 8px 0 14px; }
+.seal { display: block; }
+.confirmed-view .seal-wrap { margin-left: auto; margin-right: auto; }
+.nx-badge { width: auto; height: auto; border: 0; background: none; animation: nx-pop .5s ease both; }
+
+/* wells: darker beige behind pictures, cards stay white */
+.ss-cover { background: var(--well); border-color: #cdbf99; }
+.nx-photo { background: var(--well); }
+.nx-thumbs span, .nx-hrow img, .manage-listing > img, .market-card img, .pd-photo, .cart-list-item img, .wishlist-list article > img, .co-item > img, .ss-products article > img:first-child, .an-thumb, .nx-av, .drawer-profile-icon, .featured-card .featured-photo { background: var(--well); }
+
+/* product page */
+.pd-seller-link { display: inline-flex; align-items: center; gap: 8px; padding: 0; border: 0; background: none; font: inherit; color: var(--muted); text-align: left; }
+.pd-seller-link span { font-size: 20px; line-height: 1; color: var(--blue); }
+.pd-about, .pd-reviews { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(23,18,14,.14); }
+.pd-about h3, .pd-reviews h3 { margin: 0 0 8px; font: 700 18px var(--font-display); }
+.pd-about p { margin: 0 0 10px; font-size: 14px; line-height: 21px; color: var(--muted); }
+.pd-about ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.pd-about li { padding-left: 22px; position: relative; font-size: 14px; }
+.pd-about li::before { content: "✓"; position: absolute; left: 0; color: #2f9e44; font-weight: 700; }
+.pd-rating { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.pd-rating b { font: 700 34px var(--font-display); }
+.pd-rating span, .pd-reviews article header span { color: var(--yellow); letter-spacing: 2px; text-shadow: 0 0 1px rgba(23,18,14,.6); }
+.pd-rating small { color: var(--muted); font-size: 13px; }
+.pd-reviews article { margin-bottom: 10px; padding: 12px 14px; border: 1px solid rgba(23,18,14,.16); border-radius: 14px; background: #fff; }
+.pd-reviews article header { display: flex; align-items: center; gap: 10px; }
+.pd-reviews article strong { font: 700 14px var(--font-display); }
+.pd-reviews article time { margin-left: auto; font-size: 12px; color: var(--muted); }
+.pd-reviews article p { margin: 6px 0 0; font-size: 14px; line-height: 20px; }
+
+/* Shroom Doodle store */
+.shop-view .maker-photo.shroom { overflow: hidden; background: var(--yellow); }
+.shop-view .maker-photo.shroom img { width: 100%; height: 100%; object-fit: cover; }
+.shop-grid { margin-top: 22px; }
+
+/* confirm dialog */
+.confirm-layer { position: absolute; inset: 0; z-index: 70; display: grid; place-items: center; padding: 24px; }
+.confirm-scrim { position: absolute; inset: 0; border: 0; background: rgba(23,18,14,.5); }
+.confirm-card { position: relative; width: 100%; padding: 26px 22px 22px; border: 1px solid var(--ink); border-radius: 22px; background: #fff; text-align: center; box-shadow: 0 20px 40px rgba(23,18,14,.3); color: var(--ink); }
+.confirm-card > .ic { margin: 0 auto 8px; color: var(--ink); }
+.confirm-card h2 { margin: 0 0 6px; font: 700 22px var(--font-display); }
+.confirm-card p { margin: 0 0 18px; font-size: 14px; line-height: 20px; color: var(--muted); }
+.nx-hint { margin: 14px 4px 0; font-size: 13px; line-height: 18px; color: #b3282d; }
+
+/* version tag at the end of every page */
+
+/* hamburger: flowing layout (adapts to height), no hover fades, one icon family */
+.side-menu { display: flex; flex-direction: column; padding: 64px 22px 14px; overflow-y: auto; scrollbar-width: none; }
+.side-menu::-webkit-scrollbar { display: none; }
+.drawer-profile, .mode-switch, .drawer-links, .drawer-watermark, .drawer-mode-link, .drawer-theme { position: static !important; }
+.drawer-profile { flex: none; height: 56px; left: auto; right: auto; width: 100%; }
+.mode-switch { flex: none; margin: 18px 2px 8px; width: calc(100% - 4px); }
+.drawer-links { flex: none; width: 100%; margin-top: 8px; }
+.drawer-watermark { flex: none; width: 190px; height: auto; margin: auto auto 18px; }
+.drawer-theme { flex: none; margin-top: 0; }
+.drawer-links button, .drawer-mode-link, .drawer-theme { transition: none; }
+.drawer-links button { color: var(--muted); }.drawer-links button.active { background: var(--yellow); color: var(--ink); }
+.drawer-icon { width: var(--icon-lg); height: var(--icon-lg); display: grid; place-items: center; flex: none; color: var(--muted); }
+.drawer-links .active .drawer-icon { color: var(--ink); }
+.drawer-links .drawer-icon .ic { width: var(--icon-lg); height: auto; }
+.drawer-mode-link, .drawer-theme { width: calc(100% + 44px); margin-left: -22px; padding: 14px 35px; height: 58px; border: 0; border-top: 1px solid var(--line); background: transparent; display: flex; align-items: center; gap: 16px; font: 700 16px var(--font-display); color: var(--muted); text-align: left; }
+.drawer-mode-link { margin-top: 0; }
+.drawer-theme i { margin-left: auto; position: relative; width: 46px; height: 26px; border: 1px solid var(--ink); border-radius: 999px; background: var(--yellow); }
+.drawer-theme i b { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); transition: transform .2s ease; }
+.drawer-theme i.on { background: var(--blue); }
+.drawer-theme i.on b { transform: translateX(20px); background: #fff; }
+
+/* between 431px and 760px wide (large phones, small tablets, the demo pop-up on a phone) the page padding used to push the nav bar off screen */
+@media (max-width: 760px) {
+  body { padding: 0; }
+  .phone-app { min-height: 100dvh !important; }
+  .status-bar { top: 0; border-radius: 0; }
+  .app-header { top: 44px; }
+  .phone-app { width: min(100vw, 430px) !important; margin: 0 auto !important; }
+  .mobile-nav { bottom: 0 !important; border-radius: 0 !important; width: 100% !important; }
+  .mobile-nav > .nav-inverted-arc { width: 100% !important; }
+  .drawer-layer { top: 0 !important; bottom: 0 !important; }
+}
+
+/* version line: last line of a long page only, never pinned and never shown on a short page */
+.screen-content.has-v::after { content: "Version V1.0.2"; display: block; padding: 30px 0 0; text-align: center; font: 400 10px/14px var(--font-body); color: #8a8076; }

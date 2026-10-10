@@ -1,0 +1,62 @@
+/* Round 7: seller onboarding layout + hero card, soft shadows on cards, Collab tab. */
+
+/* seller onboarding: logo stays out of the flow, a fun hero card sits on top */
+.so-view > :not(.flow-orb):not(.flow-logo):not(.so-back) { position: relative; z-index: 1; }
+.so-view .flow-logo { display: none; }
+.so-view { padding-top: 104px; }
+.so-hero { margin: 0 0 16px; padding: 10px 16px 12px; border: 2px solid var(--ink); border-radius: 22px; background: var(--yellow); text-align: center; overflow: hidden; box-shadow: 0 12px 24px rgba(23,18,14,.2); }
+.so-hero img { display: block; width: 100%; height: 118px; object-fit: contain; }
+.so-hero span { display: block; margin-top: 4px; font: 700 18px/22px var(--font-display); letter-spacing: -.02em; color: var(--ink); }
+.so-title { margin-bottom: 16px; }
+.so-opt, .so-sum, .so-chips button { box-shadow: 0 6px 16px rgba(23,18,14,.12); }
+.so-opt.on, .so-chips button.on { box-shadow: 0 6px 0 rgba(23,18,14,.25); }
+
+/* soft shadows on cards and pills everywhere */
+.store-stats, .storefront-mini-actions button, .manage-listing, .seller-order, .pd-reviews article, .pd-form, .nx-pref, .nx-addr, .nx-tx, .nx-hrow, .nx-thread, .nx-note-row, .nx-bank, .co-card, .co-item, .an-card, .wishlist-list article, .cart-list-item, .profile-action-list, .profile-help-card, .pf-contact, .nx-radio, .nx-cash, .nx-kpis article, .nx-chart, .collab-card, .market-card img, .ss-products article, .nx-stock, .nx-qty, .sf-listings .market-card img {
+  box-shadow: 0 6px 16px rgba(23,18,14,.1);
+}
+.storefront-mini-actions button { box-shadow: 0 4px 10px rgba(23,18,14,.14); }
+
+/* Collab */
+.collab-view .nx-sub { margin-top: 0; }
+.collab-card { display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 12px; padding: 14px; border-radius: 18px; background: #fff; }
+.collab-card > div { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.collab-card strong { font: 700 16px/20px var(--font-display); }
+.collab-card small { font-size: 13px; line-height: 17px; color: var(--muted); }
+.collab-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 3px; }
+.collab-tags i { padding: 3px 9px; border: 1.5px solid var(--blue); border-radius: 999px; font: 700 10px/12px var(--font-display); font-style: normal; letter-spacing: .04em; color: var(--blue); }
+.collab-card em { display: flex; align-items: center; gap: 6px; margin-top: 2px; font: 700 11px/14px var(--font-display); font-style: normal; color: #28592c; }
+.collab-card em b { width: 8px; height: 8px; border-radius: 50%; background: #2f9e44; }
+.collab-msg { align-self: center; display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 64px; padding: 10px 10px 8px; border: 2px solid var(--ink) !important; border-radius: 16px; font: 700 11px/12px var(--font-display); color: var(--ink); }
+.mobile-nav .nav-icon-collab { width: 27px; height: 26px; }
+.so-view { justify-content: flex-start !important; padding-top: 100px !important; overflow-y: auto; }
+.so-view > * { flex: none; }
+.so-hero { min-height: 164px; }
+.so-hero img { min-height: 118px; }
+.so-next { margin-top: 20px; }
+.so-dots { margin-bottom: 16px; }
+.so-hero { min-height: 0; padding: 18px 16px 14px; }
+.so-hero img { width: auto; height: 76px; min-height: 0; margin: 0 auto; }
+.so-hero span { margin-top: 8px; font-size: 22px; line-height: 26px; }
+
+/* My collabs card */
+.my-collabs { margin: 0 0 16px; padding: 16px; border-radius: 20px; background: #fff; box-shadow: 0 6px 16px rgba(23,18,14,.12); }
+.my-collabs header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.my-collabs h3 { margin: 0; font: 700 20px var(--font-display); }
+.my-collabs > p { margin: 4px 0 8px; font-size: 14px; line-height: 20px; color: var(--muted); }
+.collab-status { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 2px solid var(--ink); border-radius: 999px; font: 700 12px/14px var(--font-display); color: var(--ink); }
+.collab-status b { width: 9px; height: 9px; border-radius: 50%; background: #2f9e44; }
+.collab-status.open { background: #dff1dc; }
+.collab-status.closed { background: #ececec; color: var(--muted); border-color: rgba(23,18,14,.4); }
+.collab-status.closed b { background: #8a8076; }
+.collab-status:hover { transform: scale(1.04); }
+.my-collab-row { display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 12px; width: 100%; padding: 10px 0; border: 0; border-top: 1px solid var(--line); background: none; text-align: left; color: var(--ink); }
+.my-collab-row > span:nth-child(2) { display: flex; flex-direction: column; gap: 2px; }
+.my-collab-row strong { font: 700 15px/20px var(--font-display); }
+.my-collab-row small { font-size: 12px; color: var(--muted); }
+.my-collab-row i { font-style: normal; font-size: 24px; color: var(--muted); }
+.my-collabs-note { display: block; margin-top: 8px; font-size: 12px; line-height: 16px; color: var(--muted); }
+
+.mobile-nav .nav-icon-collab { width: 36px; height: 34px; }
+
+.mobile-nav .nav-icon.nav-icon-collab { width: 40px !important; height: 34px !important; }

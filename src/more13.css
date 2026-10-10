@@ -1,0 +1,60 @@
+/* ===================================================================================================================
+   Round 13: hover system.
+   - Selections (chips, tags, options, role pills): hover = selected yellow + slight scale.
+   - Major action pills: hover changes colour (yellow -> blue, coral -> deeper red) + scale.
+   - Other action pills that lead to another page: hover inverts (ink fill, light text) + scale.
+   Text scales with its pill. Text on yellow is always black.
+   =================================================================================================================== */
+.category-list button, .filter-row button, .so-opt, .so-chips button, .nx-chips button, .account-tags button, .campus-tags button, .role-buy, .role-sell, .role-both, .become-seller, .drawer-become,
+.order-action, .payment-action, .pd-buy, .pd-add, .wishlist-checkout, .seller-add-listing, .add-listing-button, .sd-store, .profile-logout, .onboarding-create, .onboarding-login, .flow-primary,
+.storefront-mini-actions button, .nx-btn, .restore-btn, .nx-notify, .nx-msg, .collab-msg, .collab-status, .ss-btn, .pf-pill, .see-all, .pd-replybtn, .pd-msg, .nx-more {
+  transition: transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+/* selections -> selected yellow */
+.category-list button:hover, .filter-row button:hover, .so-opt:hover, .so-chips button:hover, .nx-chips button:hover, .account-tags button:hover, .campus-tags button:hover, .role-buy:hover, .role-sell:hover {
+  background: var(--yellow) !important; border-color: var(--ink) !important; color: #17120e !important; transform: scale(1.04); box-shadow: 0 8px 16px rgba(23,18,14,.2);
+}
+.so-opt:hover small, .so-opt:hover strong { color: #17120e !important; }
+.category-list button.selected:hover, .filter-row button.selected:hover { background: var(--blue) !important; border-color: var(--blue) !important; color: #fff !important; }
+.role-sell:hover img, .role-buy:hover img { filter: brightness(0) !important; }
+.role-both:hover, .become-seller:hover, .drawer-become:hover { background: #f2b51f !important; color: #17120e !important; transform: scale(1.03); box-shadow: 0 8px 16px rgba(23,18,14,.22); }
+
+/* major action pills: yellow -> blue, coral -> deeper red */
+.order-action:hover, .nx-btn.order-action:hover, .seller-add-listing:hover, .add-listing-button:hover, .sd-store:hover, .wishlist-checkout:hover, .pd-add:hover, .ss-btn.coral:hover:not(.x) {
+  background: var(--blue) !important; border-color: var(--blue) !important; color: #fff !important; transform: scale(1.04); box-shadow: 0 8px 18px rgba(0,87,231,.35) !important;
+}
+.order-action:hover *, .pd-add:hover *, .seller-add-listing:hover *, .sd-store:hover * { color: #fff !important; }
+.payment-action:hover, .pd-buy:hover, .onboarding-create:hover, .flow-primary:hover {
+  background: #e0353b !important; border-color: #e0353b !important; color: #17120e !important; transform: scale(1.04); box-shadow: 0 8px 18px rgba(224,53,59,.4) !important;
+}
+.onboarding-create:hover img, .flow-primary:hover img, .pd-buy:hover svg { filter: brightness(0); }
+.profile-logout:hover { background: #d62f36 !important; border-color: #d62f36 !important; color: #fff !important; transform: scale(1.05); box-shadow: 0 8px 18px rgba(214,47,54,.35) !important; }
+
+/* other action pills (lead to another page): invert */
+.storefront-mini-actions button:hover, .nx-btn.line:hover, .nx-btn.mini:hover, .restore-btn:hover, .nx-notify:hover, .nx-msg:hover, .collab-msg:hover, .collab-status:hover, .ss-btn.line:hover, .ss-btn.blue:hover, .pf-pill:hover, .pd-replybtn:hover, .nx-more:hover {
+  background: #17120e !important; border-color: #17120e !important; color: #fffcf1 !important; transform: scale(1.05); box-shadow: 0 8px 16px rgba(23,18,14,.3);
+}
+.restore-btn:hover, .nx-btn.mini:hover, .pf-edit:hover, .pd-replybtn:hover, .collab-msg:hover, .nx-notify.done:hover { color: #fec12d !important; }
+.nx-msg:hover, .nx-notify:hover, .collab-msg:hover span { color: #fffcf1; }
+.see-all:hover, .market-heading button:hover, .nx-link:hover { transform: scale(1.06); color: #17120e; }
+.pd-msg:hover { background: #17120e; transform: scale(1.08); }
+
+/* storefront making: borders you can actually see */
+.ss-form input, .ss-form textarea, .ss-tags, .nx-stock, .nx-qty { border: 1.5px solid rgba(23,18,14,.5) !important; }
+.ss-cover { border-color: rgba(23,18,14,.55) !important; }
+.ss-products article, .nx-form .ss-form label > span + * { border-color: rgba(23,18,14,.3); }
+.ss-tag, .ss-add-tag, .ss-stat { border-color: rgba(23,18,14,.6); }
+.ss-btn.coral, .ss-tag, .ss-btn.yellow { color: #17120e; }
+.phone-app.dark .ss-form input, .phone-app.dark .ss-form textarea, .phone-app.dark .ss-tags, .phone-app.dark .nx-stock, .phone-app.dark .nx-qty { border-color: rgba(23,18,14,.5) !important; }
+
+.ss-tag, .ss-tag * { color: #17120e !important; }
+
+.wishlist-checkbox.selected { color: #fff !important; }
+.onboarding-create, .flow-primary, .onboarding-create *, .flow-primary * { color: #17120e !important; }
+
+/* payment confirmed: the blue seal sits above the countdown, never over it */
+.confirmed-view > .seal-wrap { margin: 23px auto 28px; }
+.confirmed-view > p { margin: 0 0 28px; }
+.confirmed-view button { margin-top: 20px; }
+.phone-app > .confirmed-view { padding-top: 130px !important; }
