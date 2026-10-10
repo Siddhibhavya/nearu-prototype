@@ -57,4 +57,8 @@
 .confirmed-view > .seal-wrap { margin: 23px auto 28px; }
 .confirmed-view > p { margin: 0 0 28px; }
 .confirmed-view button { margin-top: 20px; }
-.phone-app > .confirmed-view { padding-top: 130px !important; }
+.phone-app > .confirmed-view { padding-top: 214px !important; }
+
+/* Side menu starts below the status bar (time, signal, battery stay visible), at the same top as the NearU header */
+.drawer-scrim { top: 44px; height: calc(100% - 44px); }
+.side-menu { top: 44px !important; height: calc(100% - 44px) !important; max-height: calc(100% - 44px) !important; padding-top: 24px !important; }
